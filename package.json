@@ -1,0 +1,25 @@
+{
+  "name": "nodegui-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && npm run build:addon",
+    "build:addon": "node-gyp -j 8 configure build",
+    "rebuild:addon": "node-gyp -j 8 rebuild",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Atul R",
+  "license": "MIT",
+  "peerDependencies": {
+    "@nodegui/nodegui": "*",
+    "node-gyp": "*"
+  },
+  "devDependencies": {
+    "@nodegui/nodegui": "^0.1.9",
+    "@types/node": "^12.7.5",
+    "node-gyp": "^5.0.3",
+    "typescript": "^3.6.3"
+  }
+}
