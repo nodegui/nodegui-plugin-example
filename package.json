@@ -8,18 +8,18 @@
     "build": "tsc && npm run build:addon",
     "build:addon": "node-gyp -j 8 configure build",
     "rebuild:addon": "node-gyp -j 8 rebuild",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm run build && qode dist/demo.js"
   },
   "author": "Atul R",
   "license": "MIT",
   "peerDependencies": {
-    "@nodegui/nodegui": "*",
-    "node-gyp": "*"
+    "@nodegui/nodegui": "*"
   },
   "devDependencies": {
     "@nodegui/nodegui": "^0.1.9",
+    "@nodegui/qode": "^1.0.5",
     "@types/node": "^12.7.5",
-    "node-gyp": "^5.0.3",
+    "node-addon-api": "^1.7.1",
     "typescript": "^3.6.3"
   }
 }

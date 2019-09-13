@@ -1,5 +1,3 @@
-#include "src/cpp/QtWidgets/QWidget/qwidget_wrap.h"
-#include "src/cpp/Extras/Utils/nutils.h"
 #include "qstatusbar_wrap.h"
 #include <QWidget>
 

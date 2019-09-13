@@ -1,3 +1,3 @@
-const addon = require("../../../build/Release/qtnode.node");
+const addon = require("../../build/Release/nodegui_statusbar.node");
 
 export default addon;

@@ -1,9 +1,8 @@
 #pragma once
-
+#include <nodegui/plugins/include.h>
 #include <napi.h>
 #include <stdlib.h>
 #include "nstatusbar.h"
-#include "src/cpp/QtWidgets/QWidget/qwidget_macro.h"
 
 class QStatusBarWrap : public  Napi::ObjectWrap<QStatusBarWrap>{
  private:
