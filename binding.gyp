@@ -7,19 +7,10 @@
                 './node_modules/@nodegui'
             ],
             "includes": [
-                "./node_modules/@nodegui/nodegui/config/common.gypi",
-                "./node_modules/@nodegui/nodegui/config/qt.gypi",
-                "./node_modules/@nodegui/nodegui/config/deps.gypi",
+                "./node_modules/@nodegui/nodegui/plugin/plugin.gypi",
                 "./config/moc.gypi",
                 "./config/application.gypi",
             ],
-            'conditions':[
-                ['OS=="mac"', {
-                    'xcode_settings': {
-                        'OTHER_LDFLAGS': ['-Wl,-rpath,@loader_path'],
-                    },
-                }]
-            ]
         },
     ]
 }

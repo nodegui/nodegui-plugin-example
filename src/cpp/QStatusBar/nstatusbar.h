@@ -1,7 +1,7 @@
 #pragma once
 
 #include <QStatusBar>
-#include <nodegui/plugins/include.h>
+#include <nodegui/plugin/include.h>
 
 class NStatusBar: public QStatusBar, public NodeWidget
 {

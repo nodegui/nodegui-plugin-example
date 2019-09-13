@@ -1,5 +1,5 @@
 import { NativeElement, BaseWidgetEvents, NodeWidget } from "@nodegui/nodegui";
-import addon from "./addon";
+import addon from "../utils/addon";
 
 export const QStatusBarEvents = Object.freeze({
   ...BaseWidgetEvents
