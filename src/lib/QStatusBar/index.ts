@@ -4,11 +4,11 @@ import addon from "../utils/addon";
 export const QStatusBarEvents = Object.freeze({
   ...BaseWidgetEvents
 });
+
 export class QStatusBar extends NodeWidget {
   native: NativeElement;
-  text?: string | number;
   constructor(parent?: NodeWidget) {
-    let native: NativeElement;
+    let native;
     if (parent) {
       native = new addon.QStatusBar(parent.native);
     } else {

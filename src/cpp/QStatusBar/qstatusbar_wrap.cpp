@@ -1,4 +1,6 @@
 #include "qstatusbar_wrap.h"
+#include <nodegui/QtWidgets/QWidget/qwidget_wrap.h>
+#include <nodegui/Extras/Utils/nutils.h>
 #include <QWidget>
 
 Napi::FunctionReference QStatusBarWrap::constructor;

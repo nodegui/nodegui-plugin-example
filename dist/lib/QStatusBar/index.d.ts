@@ -148,7 +148,6 @@ export declare const QStatusBarEvents: Readonly<{
 }>;
 export declare class QStatusBar extends NodeWidget {
     native: NativeElement;
-    text?: string | number;
     constructor(parent?: NodeWidget);
     showMessage(message: string, timeout: number): void;
 }
