@@ -30,7 +30,3 @@ target_link_libraries(${PLUGIN_ADDON_NAME} PRIVATE
     "${CMAKE_JS_LIB}"
 )
 
-GetModuleVersion(${PLUGIN_ADDON_NAME} "${CMAKE_CURRENT_LIST_DIR}")
-set_target_properties(${PLUGIN_ADDON_NAME} PROPERTIES 
-    VERSION "${${PLUGIN_ADDON_NAME}_VERSION}"
-)
