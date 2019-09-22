@@ -6,14 +6,12 @@ execute_process(COMMAND node -p "require('@nodegui/nodegui/plugin').CMAKE_HELPER
 )
 string(REPLACE "\n" "" NODEGUI_PLUGIN_CMAKE_HELPER ${NODEGUI_PLUGIN_CMAKE_HELPER})
 string(REPLACE "\"" "" NODEGUI_PLUGIN_CMAKE_HELPER ${NODEGUI_PLUGIN_CMAKE_HELPER})
-
 include("${NODEGUI_PLUGIN_CMAKE_HELPER}")
 
-# ------------- User Config -----------------
-project(NodeGUIStatusBar 
-    VERSION 1.0
-)
+# -------------- User Config ---------------
 set(PLUGIN_ADDON_NAME "nodegui_plugin_statusbar")
+
+project(${PLUGIN_ADDON_NAME})
 
 add_library(${PLUGIN_ADDON_NAME} SHARED  
     "${CMAKE_JS_SRC}"
@@ -30,4 +28,9 @@ target_include_directories(${PLUGIN_ADDON_NAME} PRIVATE
 )
 target_link_libraries(${PLUGIN_ADDON_NAME} PRIVATE
     "${CMAKE_JS_LIB}"
+)
+
+GetModuleVersion(${PLUGIN_ADDON_NAME} "${CMAKE_CURRENT_LIST_DIR}")
+set_target_properties(${PLUGIN_ADDON_NAME} PROPERTIES 
+    VERSION "${${PLUGIN_ADDON_NAME}_VERSION}"
 )
