@@ -16,7 +16,7 @@ export class QStatusBar extends NodeWidget {
     }
     super(native);
     this.native = native;
-    this.parent = parent;
+    this.nodeParent = parent;
     // bind member functions
     this.showMessage.bind(this);
   }

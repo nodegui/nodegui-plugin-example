@@ -4,7 +4,7 @@ import {
   FlexLayout,
   QWidget
 } from "@nodegui/nodegui";
-import { QStatusBar } from "./lib/QStatusBar";
+import { QStatusBar } from "./index";
 
 const win = new QMainWindow();
 const rootView = new QWidget();
