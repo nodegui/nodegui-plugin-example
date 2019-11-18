@@ -22,7 +22,7 @@
   "devDependencies": {
     "@nodegui/nodegui": "^0.5.1",
     "@nodegui/qode": "^1.0.5",
-    "@types/node": "^12.12.7",
+    "@types/node": "^12.12.8",
     "typescript": "^3.7.2"
   }
 }
