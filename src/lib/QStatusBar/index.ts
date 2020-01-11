@@ -1,13 +1,10 @@
-import { NativeElement, BaseWidgetEvents, NodeWidget } from "@nodegui/nodegui";
+import { NativeElement, NodeWidget, QWidgetSignals } from "@nodegui/nodegui";
 import addon from "../utils/addon";
 
-export const QStatusBarEvents = Object.freeze({
-  ...BaseWidgetEvents
-});
-
-export class QStatusBar extends NodeWidget {
+export interface QStatusBarSignals extends QWidgetSignals {}
+export class QStatusBar extends NodeWidget<QStatusBarSignals> {
   native: NativeElement;
-  constructor(parent?: NodeWidget) {
+  constructor(parent?: NodeWidget<any>) {
     let native;
     if (parent) {
       native = new addon.QStatusBar(parent.native);
@@ -17,8 +14,6 @@ export class QStatusBar extends NodeWidget {
     super(native);
     this.native = native;
     this.nodeParent = parent;
-    // bind member functions
-    this.showMessage.bind(this);
   }
   showMessage(message: string, timeout: number) {
     this.native.showMessage(message, timeout);
