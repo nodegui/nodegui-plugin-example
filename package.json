@@ -20,7 +20,7 @@
     "node-addon-api": "^2.0.0"
   },
   "devDependencies": {
-    "@nodegui/nodegui": "^0.12.1",
+    "@nodegui/nodegui": "^0.13.4",
     "@types/node": "^13.1.6",
     "typescript": "^3.7.3"
   }
